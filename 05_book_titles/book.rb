@@ -1,10 +1,10 @@
 def titleize(phrase)
-
+  
   exception=["and" , "or" , "but" , "yet" , "for" , "nor" ,
      "so","as" , "at" , "by" , "in" , "of" , "to","the" , "a" , "an"]
-  arr=phrase.split(" ").each{|word| word.capitalize! unless exception.include?(word) }
-  arr[0].capitalize!
-  return arr.join(' ')
+  result=phrase.split(" ").each{|word| word.capitalize! unless exception.include?(word) }
+  result[0].capitalize!
+  return result.join(' ')
 end
 class Book
   attr_accessor :title
